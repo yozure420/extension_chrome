@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Teams Meeting Button",
+    "version": "1.0",
+    "description": "Adds a button to quickly start a Teams meeting.",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": [
+        "https://teams.microsoft.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://teams.microsoft.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources":[
+        {
+            "resources": ["config.json"],
+            "matches":["https://teams.microsoft.com/*"]
+        }
+    ]
+}
