@@ -1,0 +1,17 @@
+{
+    "name": "Enter to Shift Enter",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "EnterキーをShiftEnterにする拡張機能です",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://gemini.google.com/*",
+                "*://chatgpt.com/*",
+                "*://www.genspark.ai/*"
+                ],
+            "js": ["content.js"],
+            "all_frames": true
+        }
+    ]
+}
